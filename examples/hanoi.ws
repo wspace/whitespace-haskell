@@ -1,12 +1,12 @@
-Ask the user for a
-number, then calculate its	   	 	
-factorial.		    	
+    
+   	   	 	
+		    	
    		 			 
 		    	 
-This program shows how	we		 	  
-handle	recursion	as well as big numbers.		
+   			 	  
+		    		
    		  	 	
-Try	giving	10000 as an input... 	  
+		    	  
    			  	 
 		    	 	
    	     
@@ -33,11 +33,11 @@ Try	giving	10000 as an input...
 		    	    
     
 		    	 	  
-   	    	
-		    	 	 	
    	     
+		    	 	 	
+   	 		 	
 		    	 		 
-   				 	
+   					 
 		    	 			
    	     
 		    		   
@@ -48,35 +48,76 @@ Try	giving	10000 as an input...
    		  	  
 	
 		   		  	  
+			   	
+   		
+   	 
+
+ 	 		 	    		    	 		 			  		 				 		 	  	
+
+
+
+
+   		 	    		    	 		 			  		 				 		 	  	
+   		  			
+ 
+			    		  		 
+ 
+			    		  	 	
+ 
+			    		  	  
+ 
+			    		  	  
 			
- 	 		  		  		    	 		   		 			 	  
+	  		  	 	 		 			  		  	   		 	    		    	 		 			  		 				 		 	  	
    		  	  
+			   		  	 	
+			   		  		 
+			   		  			
+			   		  	  
+			   	
+	  	   		  	 	
+			   		  			
+			   		  		 
+			
+ 	 		 	    		    	 		 			  		 				 		 	  	
+   		  			
+ 
+			    		  		 
+ 
+			    		  	 	
+ 
+			    		  	  
+ 
+			    		  	 	
 				
  	   	 	  
 
  	 			 			 			  	  		 	  	 			 	   		  	 	
-	
+   		  		 
+				
  	
  	 		 			  		  	 	 			 			 		 		   		 	  	 		 			  		  	 	
-
-
-
-
-   		  		  		    	 		   		 			 	  
+   		  	  
+			   		  	 	
+			   		  		 
+			   		  			
+			   		  	  
+			   	
+	  	   		  			
+			   		  		 
+			   		  	 	
+			
+ 	 		 	    		    	 		 			  		 				 		 	  	
+   		  			
  
-    	
-	  	
-	  		  		  		    	 		   		 			 	   		   	  		    	 			  		 		  	 	
+			    		  		 
  
-    	
-	  	
- 	 		  		  		    	 		   		 			 	  
-	  
-
-	
-
-   		  		  		    	 		   		 			 	   		   	  		    	 			  		 		  	 	
-   	
+			    		  	 	
+ 
+			    		  	  
+ 
+			 
+   		  	 	 		 			  		  	   		 	    		    	 		 			  		 				 		 	  	
 
 	
 

@@ -65,6 +65,10 @@ parse [] = []
 parse (A:A:xs) = let (num,rest) = parseNumber xs in
 		  (Push num):(parse rest)
 parse (A:C:A:xs) = Dup:(parse xs)
+parse (A:B:A:xs) = let (num,rest) = parseNumber xs in
+		   (Ref num):(parse rest)
+parse (A:B:C:xs) = let (num,rest) = parseNumber xs in
+		   (Slide num):(parse rest)
 parse (A:C:B:xs) = Swap:(parse xs)
 parse (A:C:C:xs) = Discard:(parse xs)
 
@@ -98,7 +102,7 @@ parse (B:C:B:B:xs) = ReadNum:(parse xs)
 
 parse _ = error "Unrecognised input"
 
-parseNumber :: [Token] -> (Integer, [Token])
+parseNumber :: Num x => [Token] -> (x, [Token])
 parseNumber ts = parseNum' ts []
   where
     parseNum' (C:rest) acc = (makeNumber acc,rest)
@@ -110,7 +114,7 @@ parseString ts = parseStr' ts []
     parseStr' (C:rest) acc = (makeString acc,rest)
     parseStr' (x:rest) acc = parseStr' rest (x:acc)
 
-makeNumber :: [Token] -> Integer
+makeNumber :: Num x => [Token] -> x
 makeNumber t
    | (last t) == A = makeNumber' (init t) 1
    | otherwise = -(makeNumber' (init t) 1)

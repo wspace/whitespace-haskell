@@ -7,6 +7,8 @@ import IO
 data Instruction =
        Push Integer
      | Dup
+     | Ref Int
+     | Slide Int
      | Swap
      | Discard
      | Infix Op
@@ -57,6 +59,10 @@ doInstr (VM prog (Stack stack) cs heap pc) (Push n)
     = vm (VM prog (Stack (n:stack)) cs heap pc)
 doInstr (VM prog (Stack (n:stack)) cs heap pc) Dup
     = vm (VM prog (Stack (n:n:stack)) cs heap pc)
+doInstr (VM prog (Stack (stack)) cs heap pc) (Ref i)
+    = vm (VM prog (Stack ((stack!!i):stack)) cs heap pc)
+doInstr (VM prog (Stack (n:stack)) cs heap pc) (Slide i)
+    = vm (VM prog (Stack (n:(drop i stack))) cs heap pc)
 doInstr (VM prog (Stack (n:m:stack)) cs heap pc) Swap
     = vm (VM prog (Stack (m:n:stack)) cs heap pc)
 doInstr (VM prog (Stack (n:stack)) cs heap pc) Discard
@@ -110,10 +116,7 @@ doInstr (VM prog (Stack (loc:stack)) cs heap pc) Retrieve
 	 vm (VM prog (Stack (val:stack)) cs heap pc)
 
 doInstr (VM prog (Stack stack) cs heap pc) End
-    = do --putStrLn "Done."
-	 --putStrLn $ "Stack size " ++ show (length stack)
-	 --putStrLn $ "Heap size " ++ show (length heap)
-	 return ()
+       = return ()
 doInstr _ i = fail $ "Can't do " ++ show i 
 
 -- Digging out labels from wherever they are
