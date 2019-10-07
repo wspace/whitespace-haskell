@@ -37,6 +37,6 @@ main = do
 
 usage :: IO ()
 usage = do
-        putStrLn "wspace 0.2 (c) 2003 Edwin Brady"
+        putStrLn "wspace 0.3 (c) 2003 Edwin Brady"
         putStrLn "-------------------------------"
         putStrLn "Usage: wspace [file]"
