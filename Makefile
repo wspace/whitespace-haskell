@@ -3,14 +3,14 @@ GHCI = ghci
 
 SRCS = main.hs Input.hs VM.hs Tokens.hs
 OBJS = main.o Input.o VM.o Tokens.o
-OPTS = -O -fvia-C
+OPTS = -O
 
 TARGET = wspace
 
 $TARGET: ${OBJS}
 	${GHC} ${OPTS} ${OBJS} -o ${TARGET}
 
-ghci: 
+ghci:
 	${GHCI} ${OPTS} main.hs
 
 depend:

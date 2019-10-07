@@ -1,0 +1,4 @@
+wspace
+*.hi
+*.o
+.DS_Store
